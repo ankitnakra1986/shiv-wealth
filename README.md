@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shiv Wealth
 
-## Getting Started
+A wealth platform prototype for HNI clients (₹5–50 crore): one screen that shows whether your money is working for you — and what to change.
 
-First, run the development server:
+Clickable Next.js demo with three views: **Investor**, **Advisor (IPS)**, and **Relationship Manager**. Mock data only — no bank APIs, no secrets required.
+
+---
+
+## The problem
+
+HNI clients are time-poor and financially literate. Their wealth sits across banks, brokers, mutual funds, and real estate — but nobody shows the full picture.
+
+- Aggregators show holdings, not decisions
+- Traditional RMs advise once a year, manually
+- Full-service advisors don't scale
+
+**Shiv Wealth** combines a client dashboard + RM tools + a conversational Investment Policy Statement (IPS) so the client sees financial health in real time, and the RM + platform do the work.
+
+---
+
+## What you'll see in the demo
+
+| Route | Who | What happens |
+|-------|-----|--------------|
+| `/` | Investor | Efficiency score, goal progress, wealth breakdown, RM recommendations |
+| `/actions` | Investor | Actions since last visit |
+| `/advisor` | Investor + Advisor | Conversational IPS builder + IPS summary |
+| `/rm` | Relationship Manager | Client book, recommendations, action bar |
+
+---
+
+## Product principles
+
+1. **One screen clarity** — client knows if money is working for them or against them
+2. **Efficiency (backward) + Outcome (forward)** — how well you've managed so far, and probability of hitting life goals
+3. **Trust before transactions** — IPS and recommendations feel like a trusted advisor, not a chatbot form
+4. **RM scales with the platform** — same intelligence powers client and RM views
+
+---
+
+## Tech stack
+
+- **Next.js 16** (App Router) + TypeScript
+- **Tailwind CSS 4** + Framer Motion + shadcn/ui
+- Mock adapters for Account Aggregator, CIBIL, MF Central (`src/lib/adapters/`)
+- Seeded demo data in `src/data/`
+
+---
+
+## Run locally
 
 ```bash
+git clone https://github.com/ankitnakra1986/shiv-wealth.git
+cd shiv-wealth
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build   # production build check
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/app/           # Investor, advisor, and RM routes
+src/components/    # Dashboard, RM, advisor UI
+src/data/          # Mock investor, goals, IPS, RM book
+src/lib/adapters/  # Stubbed AA / CIBIL / MF Central interfaces
+src/types/         # Domain types
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Why I built this
 
-## Deploy on Vercel
+I wanted a working answer to: *can a wealth product show an HNI client — in one glance — whether they are on track for the goals that matter, and give the RM a system that scales beyond annual reviews?*
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This prototype explores that loop: efficiency + outcome scores, goal baskets, conversational IPS, and an RM view that acts on the same data.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Built by
+
+**Ankit Nakra** — Product & AI Leader  
+[LinkedIn](https://linkedin.com/in/ankitnakra) · [GitHub](https://github.com/ankitnakra1986)
+
+---
+
+*Prototype / product exploration. Illustrative data. Not a licensed advisory product.*
