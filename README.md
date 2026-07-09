@@ -1,5 +1,7 @@
 # Shiv Wealth
 
+**Live demo:** [shiv-wealth.vercel.app](https://shiv-wealth.vercel.app)
+
 A wealth platform prototype for HNI clients (₹5–50 crore): one screen that shows whether your money is working for you — and what to change.
 
 Clickable Next.js demo with three views: **Investor**, **Advisor (IPS)**, and **Relationship Manager**. Mock data only — no bank APIs, no secrets required.
