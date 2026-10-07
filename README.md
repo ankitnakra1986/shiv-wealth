@@ -89,7 +89,7 @@ This prototype explores that loop: efficiency + outcome scores, goal baskets, co
 ## Built by
 
 **Ankit Nakra** — Product & AI Leader  
-[LinkedIn](https://linkedin.com/in/ankitnakra) · [GitHub](https://github.com/ankitnakra1986)
+[LinkedIn](https://www.linkedin.com/in/ankitnakra) · [GitHub](https://github.com/ankitnakra1986)
 
 ---
 
