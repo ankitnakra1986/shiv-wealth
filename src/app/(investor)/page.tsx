@@ -115,22 +115,6 @@ export default async function DashboardPage() {
                   color="bg-emerald-400"
                 />
               </div>
-
-              {/* Connected sources — the aggregation thesis made visible */}
-              <div className="mt-3 pt-3 border-t border-white/8">
-                <div className="flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-1.5 flex-wrap">
-                    <span className="text-white/30 text-[9px] font-semibold tracking-widest uppercase mr-0.5">Verified from</span>
-                    {['HDFC Bank', 'Zerodha', 'Franklin Templeton', 'Property', 'ICICI'].map((src) => (
-                      <span key={src} className="inline-flex items-center gap-1 text-[10px] text-white/60">
-                        <span className="w-1.5 h-1.5 rounded-full bg-status-green flex-shrink-0" />
-                        {src}
-                      </span>
-                    ))}
-                  </div>
-                  <span className="text-white/25 text-[9px] flex-shrink-0">Live</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
